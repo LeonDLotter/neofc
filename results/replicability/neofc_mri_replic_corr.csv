@@ -1,0 +1,149 @@
+parc,metric,cohort1,cohort2,Spearman's rho
+Schaefer200,original,HCP-EP (controls),HCP-EP (controls),1.0
+Schaefer200,original,HCP-EP (controls),HCP-YA,0.9184615384615384
+Schaefer200,original,HCP-EP (controls),HCP-YA (MEG-beta),0.5853846153846154
+Schaefer200,original,HCP-EP (controls),Ketamine (placebo),0.8453846153846154
+Schaefer200,original,HCP-EP (controls),MPH (placebo),0.8361538461538461
+Schaefer200,original,HCP-EP (controls),Risperidone (placebo),0.8361538461538461
+Schaefer200,original,HCP-EP (controls),YRSP,0.8923076923076924
+Schaefer200,original,HCP-YA,HCP-EP (controls),0.9184615384615384
+Schaefer200,original,HCP-YA,HCP-YA,1.0
+Schaefer200,original,HCP-YA,HCP-YA (MEG-beta),0.536923076923077
+Schaefer200,original,HCP-YA,Ketamine (placebo),0.9215384615384615
+Schaefer200,original,HCP-YA,MPH (placebo),0.8869230769230769
+Schaefer200,original,HCP-YA,Risperidone (placebo),0.9253846153846154
+Schaefer200,original,HCP-YA,YRSP,0.9461538461538461
+Schaefer200,original,HCP-YA (MEG-beta),HCP-EP (controls),0.5853846153846154
+Schaefer200,original,HCP-YA (MEG-beta),HCP-YA,0.536923076923077
+Schaefer200,original,HCP-YA (MEG-beta),HCP-YA (MEG-beta),1.0
+Schaefer200,original,HCP-YA (MEG-beta),Ketamine (placebo),0.5884615384615385
+Schaefer200,original,HCP-YA (MEG-beta),MPH (placebo),0.6276923076923077
+Schaefer200,original,HCP-YA (MEG-beta),Risperidone (placebo),0.5715384615384616
+Schaefer200,original,HCP-YA (MEG-beta),YRSP,0.55
+Schaefer200,original,Ketamine (placebo),HCP-EP (controls),0.8453846153846154
+Schaefer200,original,Ketamine (placebo),HCP-YA,0.9215384615384615
+Schaefer200,original,Ketamine (placebo),HCP-YA (MEG-beta),0.5884615384615385
+Schaefer200,original,Ketamine (placebo),Ketamine (placebo),1.0
+Schaefer200,original,Ketamine (placebo),MPH (placebo),0.943076923076923
+Schaefer200,original,Ketamine (placebo),Risperidone (placebo),0.9
+Schaefer200,original,Ketamine (placebo),YRSP,0.9807692307692307
+Schaefer200,original,MPH (placebo),HCP-EP (controls),0.8361538461538461
+Schaefer200,original,MPH (placebo),HCP-YA,0.8869230769230769
+Schaefer200,original,MPH (placebo),HCP-YA (MEG-beta),0.6276923076923077
+Schaefer200,original,MPH (placebo),Ketamine (placebo),0.943076923076923
+Schaefer200,original,MPH (placebo),MPH (placebo),1.0
+Schaefer200,original,MPH (placebo),Risperidone (placebo),0.9507692307692308
+Schaefer200,original,MPH (placebo),YRSP,0.9253846153846154
+Schaefer200,original,Risperidone (placebo),HCP-EP (controls),0.8361538461538461
+Schaefer200,original,Risperidone (placebo),HCP-YA,0.9253846153846154
+Schaefer200,original,Risperidone (placebo),HCP-YA (MEG-beta),0.5715384615384616
+Schaefer200,original,Risperidone (placebo),Ketamine (placebo),0.9
+Schaefer200,original,Risperidone (placebo),MPH (placebo),0.9507692307692308
+Schaefer200,original,Risperidone (placebo),Risperidone (placebo),1.0
+Schaefer200,original,Risperidone (placebo),YRSP,0.8984615384615384
+Schaefer200,original,YRSP,HCP-EP (controls),0.8923076923076924
+Schaefer200,original,YRSP,HCP-YA,0.9461538461538461
+Schaefer200,original,YRSP,HCP-YA (MEG-beta),0.55
+Schaefer200,original,YRSP,Ketamine (placebo),0.9807692307692307
+Schaefer200,original,YRSP,MPH (placebo),0.9253846153846154
+Schaefer200,original,YRSP,Risperidone (placebo),0.8984615384615384
+Schaefer200,original,YRSP,YRSP,1.0
+Schaefer200,inverted,HCP-EP (controls),HCP-EP (controls),1.0
+Schaefer200,inverted,HCP-EP (controls),HCP-YA,0.9876923076923076
+Schaefer200,inverted,HCP-EP (controls),HCP-YA (MEG-beta),0.7715384615384615
+Schaefer200,inverted,HCP-EP (controls),Ketamine (placebo),0.9384615384615385
+Schaefer200,inverted,HCP-EP (controls),MPH (placebo),0.9592307692307692
+Schaefer200,inverted,HCP-EP (controls),Risperidone (placebo),0.9592307692307692
+Schaefer200,inverted,HCP-EP (controls),YRSP,0.9761538461538461
+Schaefer200,inverted,HCP-YA,HCP-EP (controls),0.9876923076923076
+Schaefer200,inverted,HCP-YA,HCP-YA,1.0
+Schaefer200,inverted,HCP-YA,HCP-YA (MEG-beta),0.7469230769230769
+Schaefer200,inverted,HCP-YA,Ketamine (placebo),0.9607692307692308
+Schaefer200,inverted,HCP-YA,MPH (placebo),0.9584615384615385
+Schaefer200,inverted,HCP-YA,Risperidone (placebo),0.9569230769230769
+Schaefer200,inverted,HCP-YA,YRSP,0.9892307692307692
+Schaefer200,inverted,HCP-YA (MEG-beta),HCP-EP (controls),0.7715384615384615
+Schaefer200,inverted,HCP-YA (MEG-beta),HCP-YA,0.7469230769230769
+Schaefer200,inverted,HCP-YA (MEG-beta),HCP-YA (MEG-beta),1.0
+Schaefer200,inverted,HCP-YA (MEG-beta),Ketamine (placebo),0.6192307692307693
+Schaefer200,inverted,HCP-YA (MEG-beta),MPH (placebo),0.7384615384615385
+Schaefer200,inverted,HCP-YA (MEG-beta),Risperidone (placebo),0.8284615384615385
+Schaefer200,inverted,HCP-YA (MEG-beta),YRSP,0.74
+Schaefer200,inverted,Ketamine (placebo),HCP-EP (controls),0.9384615384615385
+Schaefer200,inverted,Ketamine (placebo),HCP-YA,0.9607692307692308
+Schaefer200,inverted,Ketamine (placebo),HCP-YA (MEG-beta),0.6192307692307693
+Schaefer200,inverted,Ketamine (placebo),Ketamine (placebo),1.0
+Schaefer200,inverted,Ketamine (placebo),MPH (placebo),0.8930769230769231
+Schaefer200,inverted,Ketamine (placebo),Risperidone (placebo),0.9107692307692308
+Schaefer200,inverted,Ketamine (placebo),YRSP,0.9584615384615385
+Schaefer200,inverted,MPH (placebo),HCP-EP (controls),0.9592307692307692
+Schaefer200,inverted,MPH (placebo),HCP-YA,0.9584615384615385
+Schaefer200,inverted,MPH (placebo),HCP-YA (MEG-beta),0.7384615384615385
+Schaefer200,inverted,MPH (placebo),Ketamine (placebo),0.8930769230769231
+Schaefer200,inverted,MPH (placebo),MPH (placebo),1.0
+Schaefer200,inverted,MPH (placebo),Risperidone (placebo),0.9176923076923077
+Schaefer200,inverted,MPH (placebo),YRSP,0.9553846153846154
+Schaefer200,inverted,Risperidone (placebo),HCP-EP (controls),0.9592307692307692
+Schaefer200,inverted,Risperidone (placebo),HCP-YA,0.9569230769230769
+Schaefer200,inverted,Risperidone (placebo),HCP-YA (MEG-beta),0.8284615384615385
+Schaefer200,inverted,Risperidone (placebo),Ketamine (placebo),0.9107692307692308
+Schaefer200,inverted,Risperidone (placebo),MPH (placebo),0.9176923076923077
+Schaefer200,inverted,Risperidone (placebo),Risperidone (placebo),1.0
+Schaefer200,inverted,Risperidone (placebo),YRSP,0.9376923076923077
+Schaefer200,inverted,YRSP,HCP-EP (controls),0.9761538461538461
+Schaefer200,inverted,YRSP,HCP-YA,0.9892307692307692
+Schaefer200,inverted,YRSP,HCP-YA (MEG-beta),0.74
+Schaefer200,inverted,YRSP,Ketamine (placebo),0.9584615384615385
+Schaefer200,inverted,YRSP,MPH (placebo),0.9553846153846154
+Schaefer200,inverted,YRSP,Risperidone (placebo),0.9376923076923077
+Schaefer200,inverted,YRSP,YRSP,1.0
+Schaefer200Subcortical,original,HCP-EP (controls),HCP-EP (controls),1.0
+Schaefer200Subcortical,original,HCP-EP (controls),HCP-YA,0.8238461538461539
+Schaefer200Subcortical,original,HCP-EP (controls),Ketamine (placebo),0.7730769230769231
+Schaefer200Subcortical,original,HCP-EP (controls),Risperidone (placebo),0.7384615384615385
+Schaefer200Subcortical,original,HCP-EP (controls),YRSP,0.8438461538461538
+Schaefer200Subcortical,original,HCP-YA,HCP-EP (controls),0.8238461538461539
+Schaefer200Subcortical,original,HCP-YA,HCP-YA,1.0
+Schaefer200Subcortical,original,HCP-YA,Ketamine (placebo),0.8107692307692308
+Schaefer200Subcortical,original,HCP-YA,Risperidone (placebo),0.7715384615384615
+Schaefer200Subcortical,original,HCP-YA,YRSP,0.8569230769230769
+Schaefer200Subcortical,original,Ketamine (placebo),HCP-EP (controls),0.7730769230769231
+Schaefer200Subcortical,original,Ketamine (placebo),HCP-YA,0.8107692307692308
+Schaefer200Subcortical,original,Ketamine (placebo),Ketamine (placebo),1.0
+Schaefer200Subcortical,original,Ketamine (placebo),Risperidone (placebo),0.8492307692307692
+Schaefer200Subcortical,original,Ketamine (placebo),YRSP,0.933076923076923
+Schaefer200Subcortical,original,Risperidone (placebo),HCP-EP (controls),0.7384615384615385
+Schaefer200Subcortical,original,Risperidone (placebo),HCP-YA,0.7715384615384615
+Schaefer200Subcortical,original,Risperidone (placebo),Ketamine (placebo),0.8492307692307692
+Schaefer200Subcortical,original,Risperidone (placebo),Risperidone (placebo),1.0
+Schaefer200Subcortical,original,Risperidone (placebo),YRSP,0.8153846153846154
+Schaefer200Subcortical,original,YRSP,HCP-EP (controls),0.8438461538461538
+Schaefer200Subcortical,original,YRSP,HCP-YA,0.8569230769230769
+Schaefer200Subcortical,original,YRSP,Ketamine (placebo),0.933076923076923
+Schaefer200Subcortical,original,YRSP,Risperidone (placebo),0.8153846153846154
+Schaefer200Subcortical,original,YRSP,YRSP,1.0
+Schaefer200Subcortical,inverted,HCP-EP (controls),HCP-EP (controls),1.0
+Schaefer200Subcortical,inverted,HCP-EP (controls),HCP-YA,0.9423076923076923
+Schaefer200Subcortical,inverted,HCP-EP (controls),Ketamine (placebo),0.8407692307692308
+Schaefer200Subcortical,inverted,HCP-EP (controls),Risperidone (placebo),0.95
+Schaefer200Subcortical,inverted,HCP-EP (controls),YRSP,0.9838461538461538
+Schaefer200Subcortical,inverted,HCP-YA,HCP-EP (controls),0.9423076923076923
+Schaefer200Subcortical,inverted,HCP-YA,HCP-YA,1.0
+Schaefer200Subcortical,inverted,HCP-YA,Ketamine (placebo),0.9338461538461539
+Schaefer200Subcortical,inverted,HCP-YA,Risperidone (placebo),0.9584615384615385
+Schaefer200Subcortical,inverted,HCP-YA,YRSP,0.9553846153846154
+Schaefer200Subcortical,inverted,Ketamine (placebo),HCP-EP (controls),0.8407692307692308
+Schaefer200Subcortical,inverted,Ketamine (placebo),HCP-YA,0.9338461538461539
+Schaefer200Subcortical,inverted,Ketamine (placebo),Ketamine (placebo),1.0
+Schaefer200Subcortical,inverted,Ketamine (placebo),Risperidone (placebo),0.8730769230769231
+Schaefer200Subcortical,inverted,Ketamine (placebo),YRSP,0.8746153846153846
+Schaefer200Subcortical,inverted,Risperidone (placebo),HCP-EP (controls),0.95
+Schaefer200Subcortical,inverted,Risperidone (placebo),HCP-YA,0.9584615384615385
+Schaefer200Subcortical,inverted,Risperidone (placebo),Ketamine (placebo),0.8730769230769231
+Schaefer200Subcortical,inverted,Risperidone (placebo),Risperidone (placebo),1.0
+Schaefer200Subcortical,inverted,Risperidone (placebo),YRSP,0.9453846153846154
+Schaefer200Subcortical,inverted,YRSP,HCP-EP (controls),0.9838461538461538
+Schaefer200Subcortical,inverted,YRSP,HCP-YA,0.9553846153846154
+Schaefer200Subcortical,inverted,YRSP,Ketamine (placebo),0.8746153846153846
+Schaefer200Subcortical,inverted,YRSP,Risperidone (placebo),0.9453846153846154
+Schaefer200Subcortical,inverted,YRSP,YRSP,1.0

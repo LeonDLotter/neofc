@@ -14,15 +14,15 @@
 **/hcp_ya_mri
 **/hcp_ya_meg
 
-# Files and folders excluded due to size
-**/rbc
-
 # Specific folder handling (easier to specify here than to remove from the above patterns)
 !results/loo/hcp_ya_mri/
 results/loo/hcp_ya_mri/*individual*
 !results/neofc/*
 results/neofc/*/*individual*
 !results/neofc/yrsp/*
+
+# Weird MS office stuff
+~$*
 
 # Python
 # Byte-compiled / optimized / DLL files

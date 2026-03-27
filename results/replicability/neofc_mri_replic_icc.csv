@@ -1,0 +1,9 @@
+datasets,parc,metric,Type,Description,ICC,F,df1,df2,pval,CI95%
+All,Schaefer200,original,ICC3,Single fixed raters,0.87,48.41,24,144,5.204549625316584e-57,[0.79 0.93]
+All,Schaefer200,inverted,ICC3,Single fixed raters,0.89,59.13,24,144,1.5355025532594232e-62,[0.82 0.94]
+All,Schaefer200Subcortical,original,ICC3,Single fixed raters,0.92,59.06,24,96,4.467750729182734e-47,[0.86 0.96]
+All,Schaefer200Subcortical,inverted,ICC3,Single fixed raters,0.94,73.86,24,96,2.072963705407765e-51,[0.89 0.97]
+Without MEG,Schaefer200,original,ICC3,Single fixed raters,0.87,48.41,24,144,5.204549625316584e-57,[0.79 0.93]
+Without MEG,Schaefer200,inverted,ICC3,Single fixed raters,0.89,59.13,24,144,1.5355025532594232e-62,[0.82 0.94]
+Without MEG,Schaefer200Subcortical,original,ICC3,Single fixed raters,0.92,59.06,24,96,4.467750729182734e-47,[0.86 0.96]
+Without MEG,Schaefer200Subcortical,inverted,ICC3,Single fixed raters,0.94,73.86,24,96,2.072963705407765e-51,[0.89 0.97]
