@@ -18,7 +18,7 @@ dct = {
     "Tab. S1 - PET reference": {
         "path": pdir_deriv / "reference" / "pet" / "metadata.csv",
         "legend": """
-            Metadata for the 25 PET nuclear imaging maps used as neurophysiological reference atlases.\\n
+            Metadata for the 25 PET nuclear imaging maps used as neurobiological reference atlases.\\n
             group: neurotransmitter system or functional category; target: receptor or transporter target; tracer: radioligand used; 
             metric: quantitative PET metric (e.g., BPnd, SUVR, CMRglu); sample_size: total number of subjects; 
             n_female: number of female subjects; age_mean: mean age in years; age_sd: standard deviation of age; 

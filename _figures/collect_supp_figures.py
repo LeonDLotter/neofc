@@ -4,7 +4,6 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak, 
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.enums import TA_CENTER, TA_JUSTIFY
 from reportlab.pdfgen import canvas as rl_canvas
-#from svglib.svglib import svg2rlg
 from PIL import Image as PILImage
 import io
 from pathlib import Path
@@ -16,7 +15,8 @@ def create_supplementary_figures(
     output_pdf: str,
     max_width_cm: float = 18,
     page_size=A4,
-    dpi: float = 300
+    dpi: float = 300,
+    title: str = "Supplementary Figures",
 ):
     """
     Create supplementary figures PDF preserving vector graphics.
@@ -100,7 +100,7 @@ def create_supplementary_figures(
     _add_toc_links(output_writer, toc_target_pages, entry_positions)
     
     # Add hierarchical bookmarks
-    parent_bookmark = output_writer.add_outline_item("Supplementary Figures", 0)
+    parent_bookmark = output_writer.add_outline_item(title, 0)
     for idx, item in enumerate(images_data):
         title = item.get('title')
         if isinstance(title, tuple) and len(title) >= 2:
@@ -748,7 +748,7 @@ images_data = [
         """
     },
     {
-        "title": ("Fig. S2", "NEOFC curves derived from neurophysiological atlases"),
+        "title": ("Fig. S2", "NEOFC curves derived from neurobiological atlases"),
         "path": wd / "plots" / "discover" / f"mri_parc-Schaefer200_measure-pearson_run-1.pdf",
         "legend": """
             NEOFC curves for all 25 nuclear imaging reference maps, organized by broad neurotransmitter systems (Schaefer200 and Schaefer200 + subcortex parcellation).
@@ -979,3 +979,5 @@ create_supplementary_figures(
     page_size=A4,
     dpi=400
 )
+
+
