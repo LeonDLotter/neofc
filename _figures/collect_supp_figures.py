@@ -16,35 +16,47 @@ def create_supplementary_figures(
     max_width_cm: float = 18,
     page_size=A4,
     dpi: float = 300,
-    title: str = "Supplementary Figures",
+    section_title: str = "Supplementary Figures",
+    manuscript_title: str = None,
+    authors: str = None,
 ):
     """
     Create supplementary figures PDF preserving vector graphics.
-    
+
     Args:
         images_data: List of dicts with 'path', 'title', 'legend' keys
         output_pdf: Output PDF file path
         max_width_cm: Maximum image width in cm
         page_size: Page size for text pages
         dpi: DPI for raster images (default 300)
+        section_title: Top-level bookmark / section label (default "Supplementary Figures")
+        manuscript_title: Paper title shown on the title page
+        authors: Author string shown on the title page (legend font size, not bold)
     """
     from pypdf import PdfWriter
     from io import BytesIO
-    
+
     output_writer = PdfWriter()
-    
+
+    # Add optional title page before TOC
+    if manuscript_title or authors:
+        _add_title_page(output_writer, manuscript_title, authors, page_size)
+        toc_page_index = 1
+    else:
+        toc_page_index = 0
+
     # Track page numbers for each figure (will be populated as we add pages)
     figure_page_numbers = []
     subfigure_page_numbers = {}
 
     # Build TOC entries (main figures + optional indented subfigures)
     toc_entries = _build_toc_entries(images_data)
-    
+
     # Add TOC page and get entry positions
     entry_positions = _add_toc_page(output_writer, toc_entries, page_size)
-    
+
     # Track page numbers for bookmarks
-    current_page = 1  # TOC is page 0
+    current_page = toc_page_index + 1  # figures start after TOC
     
     for idx, item in enumerate(images_data):
         # Get item-specific max_width_cm or use global default
@@ -97,24 +109,24 @@ def create_supplementary_figures(
     
     # Add links to TOC page using the stored entry positions
     toc_target_pages = _get_toc_target_pages(toc_entries, figure_page_numbers, subfigure_page_numbers)
-    _add_toc_links(output_writer, toc_target_pages, entry_positions)
-    
+    _add_toc_links(output_writer, toc_target_pages, entry_positions, toc_page_index)
+
     # Add hierarchical bookmarks
-    parent_bookmark = output_writer.add_outline_item(title, 0)
+    parent_bookmark = output_writer.add_outline_item(section_title, toc_page_index)
     for idx, item in enumerate(images_data):
-        title = item.get('title')
-        if isinstance(title, tuple) and len(title) >= 2:
-            bookmark_title = f"{title[0]}: {title[1]}"
-        elif isinstance(title, tuple):
-            bookmark_title = title[0]
+        item_title = item.get('title')
+        if isinstance(item_title, tuple) and len(item_title) >= 2:
+            bookmark_title = f"{item_title[0]}: {item_title[1]}"
+        elif isinstance(item_title, tuple):
+            bookmark_title = item_title[0]
         else:
-            bookmark_title = title if title else f"Figure {idx+1}"
-        
+            bookmark_title = item_title if item_title else f"Figure {idx+1}"
+
         figure_bookmark = output_writer.add_outline_item(bookmark_title, figure_page_numbers[idx], parent=parent_bookmark)
 
         if idx in subfigure_page_numbers:
             subtitles = item.get('subtitles', [])
-            fig_num = title[0] if isinstance(title, tuple) and len(title) >= 1 else ""
+            fig_num = item_title[0] if isinstance(item_title, tuple) and len(item_title) >= 1 else ""
             for sub_idx, page_num in enumerate(subfigure_page_numbers[idx]):
                 if sub_idx < len(subtitles):
                     sup_entry = subtitles[sub_idx]
@@ -198,6 +210,63 @@ def _get_toc_target_pages(toc_entries, figure_page_numbers, subfigure_page_numbe
     return target_pages
 
 
+def _add_title_page(writer, manuscript_title, authors, page_size):
+    """Add a title page with section label, manuscript title, and authors."""
+    from io import BytesIO
+
+    buffer = BytesIO()
+    doc = SimpleDocTemplate(
+        buffer, pagesize=page_size,
+        leftMargin=2*cm, rightMargin=2*cm,
+        topMargin=1*cm, bottomMargin=1*cm
+    )
+    styles = getSampleStyleSheet()
+
+    supp_label_style = ParagraphStyle(
+        'SuppLabel',
+        parent=styles['Normal'],
+        fontName='Times-Bold',
+        fontSize=11,
+        leading=13,
+        alignment=TA_CENTER,
+        spaceAfter=6,
+    )
+    title_style = ParagraphStyle(
+        'ManuscriptTitle',
+        parent=styles['Normal'],
+        fontName='Times-Bold',
+        fontSize=15,
+        leading=20,
+        alignment=TA_CENTER,
+        spaceAfter=16,
+    )
+    authors_style = ParagraphStyle(
+        'Authors',
+        parent=styles['Normal'],
+        fontName='Times-Roman',
+        fontSize=10,
+        leading=14,
+        alignment=TA_CENTER,
+        spaceAfter=6,
+    )
+
+    story = [
+        Paragraph("Supplementary Figures", supp_label_style),
+        Spacer(1, 1.5*cm),
+    ]
+    if manuscript_title:
+        story.append(Paragraph(manuscript_title, title_style))
+    if authors:
+        story.append(Spacer(1, 0.4*cm))
+        story.append(Paragraph(authors, authors_style))
+
+    doc.build(story)
+    buffer.seek(0)
+
+    reader = PdfReader(buffer)
+    writer.add_page(reader.pages[0])
+
+
 def _add_toc_page(writer, toc_entries, page_size):
     """Add a table of contents page listing all figures and return entry positions."""
     from io import BytesIO
@@ -259,25 +328,22 @@ def _add_toc_page(writer, toc_entries, page_size):
     return entry_positions
 
 
-def _add_toc_links(writer, target_pages, entry_positions):
+def _add_toc_links(writer, target_pages, entry_positions, toc_page_index=0):
     """Add clickable links to the TOC page using exact entry positions."""
     from pypdf.annotations import Link
     from pypdf.generic import Fit
-    
+
     for idx, (page_num, pos) in enumerate(zip(target_pages, entry_positions)):
-        # Use exact positions from text placement
-        # Add small descent below baseline for click area
         entry_bottom = pos['y_baseline'] - 3
         entry_top = pos['y_baseline'] + pos['height']
-        
-        # Create link annotation using pypdf's Link class
+
         annotation = Link(
             rect=(pos['left'], entry_bottom, pos['right'], entry_top),
             target_page_index=page_num,
             fit=Fit(fit_type="/Fit")
         )
-        
-        writer.add_annotation(page_number=0, annotation=annotation)
+
+        writer.add_annotation(page_number=toc_page_index, annotation=annotation)
 
 
 def _add_page_with_content(writer, img_obj, title, legend, page_size):
@@ -977,7 +1043,9 @@ create_supplementary_figures(
     output_pdf=output_pdf,
     max_width_cm=20,
     page_size=A4,
-    dpi=400
+    dpi=400,
+    manuscript_title="Linking human brain functional connectivity to underlying neurotransmission",
+    authors="Leon D. Lotter, ..., Juergen Dukart",
 )
 
 
