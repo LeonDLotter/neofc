@@ -15,9 +15,18 @@ You can find an earlier conference poster [here](https://leondlotter.de/doc/post
 The core method supporting the NEOFC approach is available as a stand-alone Python tool: [`mapconn`](https://github.com/LeonDLotter/mapconn).  
 In the future, we will embed mapconn in our more versatile and user-directed Python toolbox for spatial colocalization analysis, [`NiSpace`](https://github.com/LeonDLotter/NiSpace).
 
+## Environment
+
+To reproduce analyses, we highly recommend to set up your python environment using the [environment.yml](environment.yml) file included in this repository. The specific version of the mapconn tool used for the analyses is [mapconn, commit e5e7826](https://github.com/LeonDLotter/mapconn/commit/e5e78263f6c0d06013652fa15a4630c41305db95). For example, to install the environment using mamba, you would simply call from this repository:
+
+```bash
+mamba env create -f environment.yml
+mamba activate neofc
+```
+
 ## Cite
 
-> Lotter LD, Shafiei G, Larabi D, Koushik A, Dipasquale O, Mehta M, Cercignani M, Sethi A, Harrison N, Holiga Š, Umbricht D, Yakushev I, Muthukumaraswamy S, Forsyth A, Hipp JF, Misic B, Caspers S, Koenig J, Patil KR, Paquola C, Eickhoff SB & Dukart J (2026). *Linking human brain functional connectivity to underlying neurotransmission*. bioRxiv.
+> Lotter LD, Shafiei G, Larabi D, Koushik A, Dipasquale O, Mehta M, Cercignani M, Sethi A, Harrison N, Holiga Š, Umbricht D, Yakushev I, Muthukumaraswamy S, Forsyth A, Hipp JF, Misic B, Caspers S, Koenig J, Patil KR, Paquola C, Eickhoff SB & Dukart J (2026). *Linking human brain functional connectivity to underlying neurotransmission*. bioRxiv. https://doi.org/10.64898/2026.04.28.721294
 
 > Lotter LD (2026). *neofc*. Zenodo. https://doi.org/10.5281/zenodo.19858671
 
